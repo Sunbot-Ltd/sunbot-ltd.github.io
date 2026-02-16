@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary: #0057D9;   /* Electric Blue */
+    --accent: #FF7A00;    /* Orange Accent */
+    --dark: #0A1F44;      /* Deep Navy */
+    --light: #F4F7FB;     /* Soft White */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    color: var(--light);
+}
+
+/* Overlay subtle texture */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+    width: 170px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 15px 0 20px;
+}
+
+/* INFO TEXT */
+.info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* BUTTON STYLE - STAFF BUTTONS ORANGE */
+.button {
+    display: inline-block;
+    background: var(--accent);   /* Orange */
+    color: white;
+    padding: 12px 26px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #E66900;   /* Darker Orange on hover */
+    transform: translateY(-3px);
+}
+
+/* TEAM GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* MAP */
+iframe {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* STAFF CARD CONTAINER */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;       /* Add padding for mobile */
+    min-height: 100vh;        /* Ensure full height */
+    box-sizing: border-box;
+}
+
+/* STAFF CARD */
+.card {
+    background: white;
+    color: var(--dark);
+    width: 100%;              /* Full width on mobile */
+    max-width: 400px;         /* Limit width on desktop */
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* STAFF IMAGE */
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;       /* Circle profile image */
+    margin-bottom: 15px;
+}
+
+/* STAFF NAME & POSITION */
+.card h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* CONTACT BUTTONS inside staff pages */
+.card .button {
+    width: 100%;              /* Full width for mobile */
+    padding: 12px 0;
+    margin: 8px 0;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* BACK LINK */
+.back {
+    display: block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media(max-width:600px){
+    .card {
+        padding: 25px 15px;
+    }
+    .card img {
+        width: 90px;
+        height: 90px;
+    }
+    .card h1 {
+        font-size: 20px;
+    }
+    .card p {
+        font-size: 14px;
+    }
+    .card .button {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+/* BACK LINK */
+.back {
+    display: block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* SOCIAL ICONS */
+.social-container {
+    margin-top: 25px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Social colors */
+.facebook { background: #1877f2; }
+.instagram { background: #FF5F6D; }  /* Slight gradient pink/orange for Instagram */
+.linkedin { background: #0077b5; }
+
+/* Hover Animation */
+.social-icon:hover {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+@keyframes fadeIn {
+    from { opacity:0; transform: translateY(20px);}
+    to { opacity:1; transform: translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    h1 { font-size: 24px; }
+}
