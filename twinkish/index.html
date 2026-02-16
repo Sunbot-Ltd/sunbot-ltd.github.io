@@ -3,31 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Twinkish Dauhoo</title>
-<link rel="stylesheet" href="../style.css">
+<title>Sunbot Engineering Services Ltd</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* Social Icons Section */
+.social-container {
+    margin-top: 25px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Brand Colors */
+.facebook { background: #1877f2; }
+.instagram { 
+    background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+.linkedin { background: #0077b5; }
+
+/* Hover Animation */
+.social-icon:hover {
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+   /* SAVE CONTACT BUTTON - ORANGE */
+.button.save-contact {
+    background: #FF7A00;   /* Orange */
+    color: white;
+    padding: 12px 26px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.button.save-contact:hover {
+    background: #E66900;   /* Darker orange on hover */
+    transform: translateY(-3px);
+}
+
+/* STAFF WHATSAPP BUTTON - GREEN */
+.button.whatsapp-staff {
+    background: #25D366;  /* Green */
+    color: white;
+    padding: 12px 26px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.button.whatsapp-staff:hover {
+    background: #1DA851;  /* Slightly darker green */
+    transform: translateY(-3px);
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;  /* Green */
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+</style>
+
 </head>
 
 <body>
-<div class="card-wrapper">
-<div class="card">
 
-<img src="../logo.png">
+<div class="container">
 
-<h1>Twinkish Dauhoo</h1>
-<h3>Operations Director</h3>
-<p><strong>Mubelo Electrical Ltd</strong></p>
-<p><strong>Sunbot Engineering Services Ltd</strong></p>
+<img src="logo.png" class="logo">
 
+<h1>Sunbot Engineering Services Ltd</h1>
 
-<p>📞 <a href="tel:+23054986414">54986414</a></p>
-<p>📧 <a href="mailto:twinkish.d@mubelo.mu">twinkish.d@mubelo.mu</a></p>
+<div class="info">
+<p>📍 THE CUBICLE, Royal Road, Phoenix</p>
+<p>📞 <a href="tel:+2306985200" style="color:white;">698 5200</a></p>
+<p>📧 <a href="directortech@sunbot-eng.com" style="color:white;">directortech@sunbot-eng.com</a></p>
+</div>
 
-<a href="https://wa.me/23054986414" class="button">WhatsApp</a>
-<a href="../twinkish.vcf" class="button" download>Save Contact</a>
+<a href="https://wa.me/23054986413" class="button" target="_blank">
+   WhatsApp Company
+</a>
 
-<a href="/" class="back">⬅ Back to Company</a>
+<!-- SOCIAL MEDIA ICONS -->
+<h2>Follow Us</h2>
+
+<div class="social-container">
+
+<a href="https://www.facebook.com/people/Sunbot/61573430247931/" 
+   target="_blank" 
+   class="social-icon facebook">
+   <i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/sunbot_mru/" 
+   target="_blank" 
+   class="social-icon instagram">
+   <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/company/sunbotmauritius/" 
+   target="_blank" 
+   class="social-icon linkedin">
+   <i class="fab fa-linkedin-in"></i>
+</a>
 
 </div>
+
+<h2>Find Us</h2>
+
+<iframe src="https://www.google.com/maps?q=THE+CUBICLE,+Royal+Road,+Phoenix,+Mauritius&output=embed"></iframe>
+
+<h2>Our Team</h2>
+
+<div class="team-grid">
+<a href="/richard" class="button">Richard Dupuche</a>
+<a href="/twinkish" class="button">Twinkish Dauhoo</a>
+<a href="/fleurette" class="button">Fleurette Bosquet</a>
 </div>
+
+</div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/23054986413" 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
